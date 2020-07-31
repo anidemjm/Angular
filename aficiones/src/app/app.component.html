@@ -1,0 +1,25 @@
+<input type="text" [(ngModel)]="nombre"> 
+<p>{{ nombre }}</p>
+<hr>
+<div class="formulario">
+    <div class="form-group">
+        <label>Nombre</label><br>
+        <input type="text" [(ngModel)]="nombre">
+</div>
+
+<input type="text" [(ngModel)]="aficion"> 
+<p>{{ nombre }}</p>
+<hr>
+<div class="formulario">
+    <div class="form-group">
+        <label>aficion</label><br>
+        <input type="text" [(ngModel)]="aficion">
+</div>
+
+<div class="form-group">
+    <select [(ngModel)]="pais">
+    <option value="Running">Running</option>
+    <option value="JuegosPC">JuegosPC</option>  
+    <option value="Leer">Leer</option>
+    
+    </select>
