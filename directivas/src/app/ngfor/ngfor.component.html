@@ -1,0 +1,26 @@
+<h1>Recoger y pintar un listado que es una propiedad de mi ts</h1>
+<div class="episodios">
+
+    <article [ngClass]="{azul:par, rosa:impar }"
+        *ngFor="let episodio of episodios; let indice = index; let ultimo= last; let primero=first; let par= even; let impar= odd ">
+        <h3>{{indice}} - {{episodio.title}}</h3>
+        <p>Director: {{episodio.director}}</p>
+        <p *ngIf="primero">primero: {{primero}}</p>
+        <p *ngIf="ultimo">ultimo: {{ultimo}}</p>
+    </article>
+
+</div>
+
+<!-- crear una tabla de html que tenga como cabeceras titulo y director, y poner cada registro del array en una fila de la tabla -->
+
+<table border="1" width="100%">
+    <tr>
+        <th>Director</th>
+        <th>Capitulo</th>
+    </tr>
+    <tr *ngFor="let episodio of episodios">
+        <td>{{episodio.director}}</td>
+        <td>{{episodio.title}}</td>
+    </tr>
+
+</table>

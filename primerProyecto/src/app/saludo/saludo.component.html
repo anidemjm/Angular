@@ -1,0 +1,12 @@
+<div class="saludo">
+    <h1>{{ titulo }}</h1>
+    <p>Hola <span [class]="color">{{nombre}}</span></p>
+    <button (click)="cambiarColor($event)">Cambiar Color</button>
+    <select (change)="cambiarTexto($event)">
+        <option value="">Selecciona una opción</option>
+        <option value="uno">Uno</option>
+        <option value="dos">Dos</option>
+        <option value="tres">Tres</option>
+        <option value="cuatro">Cuatro</option>
+    </select>
+</div>

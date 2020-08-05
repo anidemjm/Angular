@@ -1,0 +1,9 @@
+.rojodisabled {
+    color: tomato;
+    display: none;
+}
+
+.rojoenabled {
+    color: tomato;
+    display: inline-block;
+}

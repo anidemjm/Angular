@@ -1,0 +1,36 @@
+<div class="tabs">
+    <nav>
+        <ul class="menu">
+            <li [ngClass]="{'activo': seccion === 'sobremi' }" data-seccion="sobremi" (click)="cargarSeccion($event)">
+                About us</li>
+            <li [ngClass]="{'activo': seccion === 'experiencia'}" data-seccion="experiencia"
+                (click)="cargarSeccion($event)">Experiencia
+            </li>
+            <li [ngClass]="{'activo': seccion === 'estudios'}" data-seccion="estudios" (click)="cargarSeccion($event)">
+                Estudios</li>
+        </ul>
+    </nav>
+    <section>
+        <article *ngIf="seccion === 'sobremi'">
+            <strong>sobre mi</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quia voluptas
+            perspiciatis esse consequuntur veritatis enim mollitia fuga maiores minus expedita dolorem ducimus a ipsam,
+            possimus dolore nam quaerat quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+            exercitationem minus, id accusamus deleniti illum nesciunt dolorum numquam est officiis corporis voluptates
+            alias sequi necessitatibus doloribus, aspernatur esse. Tempore, assumenda.
+        </article>
+        <article *ngIf="seccion === 'experiencia'">
+            <strong>experiencia</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quia voluptas
+            perspiciatis esse consequuntur veritatis enim mollitia fuga maiores minus expedita dolorem ducimus a ipsam,
+            possimus dolore nam quaerat quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+            temporibus?
+        </article>
+        <article *ngIf="seccion === 'estudios'">
+            <strong>estudios</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quia voluptas
+            perspiciatis esse consequuntur veritatis enim mollitia fuga maiores minus expedita dolorem ducimus a ipsam,
+            possimus dolore nam quaerat quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente optio
+            fugiat doloribus quam facilis cupiditate. Error, optio! Non suscipit incidunt accusamus doloremque
+            praesentium?
+        </article>
+
+    </section>
+</div>

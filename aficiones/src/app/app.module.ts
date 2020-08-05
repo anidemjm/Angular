@@ -1,14 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ListaAficionesComponent } from './lista-aficiones/lista-aficiones.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormularioComponent,
+    ListaAficionesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

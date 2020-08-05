@@ -1,0 +1,11 @@
+<!-- 
+
+    1. cargar el componente el app.component.html
+    2. crear un div circular de 200px por 200px
+    3. crear en css las clases rojo, verde y amarillo que daran color de fondo al semaforo.
+    4. inicializar el semaforo en rojo.
+    5. cada 3 segundos el semaforo tiene que cambiar del color, siguiente esta secuencia R -> A -> V -> R
+
+
+-->
+<div class="semaforo" [ngClass]="{rojo: (color === 'R'), amarillo: (color === 'A'), verde: (color === 'V') }"></div>

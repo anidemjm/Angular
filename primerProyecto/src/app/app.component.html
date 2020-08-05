@@ -1,0 +1,40 @@
+<!-- <header></header>
+<main>
+    <div class="sidebar">
+        <app-saludo></app-saludo>
+    </div>
+    <div>
+        <app-cronometro inicio="64" fin="57"></app-cronometro>
+        <app-cronometro inicio="12" fin="2"></app-cronometro>
+        <app-cronometro inicio="2" fin="0"></app-cronometro>
+        <app-cronometro inicio="34"></app-cronometro>
+        <app-cronometro></app-cronometro>
+    </div> -->
+<!-- <neo-suma [num1]="numero1" [num2]="numero2"></neo-suma>
+    <neo-suma [num1]="arrNumeros[1]" [num2]="arrNumeros[5]"></neo-suma>
+    <neo-suma num1="4" num2="90"></neo-suma>
+    <neo-suma num1="56" num2="72"></neo-suma> -->
+<!-- <app-calculadora></app-calculadora>
+</main>
+<footer></footer> -->
+
+<div class="tienda">
+    <div class="carrito">
+        {{ textoCarrito }}
+    </div>
+    <div class="productos">
+
+        <app-producto [tipo]="arrProductos[0].tipo" [imagen]="arrProductos[0].imagen"
+            (obtenerProducto)="getInfo($event)">
+        </app-producto>
+
+        <app-producto [tipo]="arrProductos[1].tipo" [imagen]="arrProductos[1].imagen"
+            (obtenerProducto)="getInfo($event)">
+        </app-producto>
+
+        <app-producto [tipo]="arrProductos[2].tipo" [imagen]="arrProductos[2].imagen"
+            (obtenerProducto)="getInfo($event)">
+        </app-producto>
+
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<input type="text" [(ngModel)]="color">
+
+<p [ngStyle]="{'color':color, 'font-size':tamano+'px'}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
+    amet
+    fuga
+    repellendus! A
+    expedita quia
+    ipsam
+    impedit provident corrupti fuga, earum illum, placeat architecto molestias porro saepe dolorem voluptate deserunt!
+</p>
+
+<p [ngStyle]="estilosParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus iure, sit amet
+    dignissimos optio
+    corrupti neque quia perspiciatis quasi. Architecto rem nostrum suscipit et ex, cupiditate temporibus reprehenderit
+    est. Ipsa?</p>
+
+<button (click)="cambiarEstilos()">Cambiar Estilos</button>
+
+<p style="color:blue;font-size:24px">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis voluptatum
+    nesciunt omnis harum doloribus
+    optio mollitia non. Rerum, ducimus velit. Sint blanditiis a facilis suscipit. Saepe, alias assumenda? Odit,
+    nesciunt!</p>
+
+<h1 [ngStyle]="estilosH1">Juan Antonio</h1>
+<input type="range" min="10" max="70" step="1" (input)="cambiarFuente($event)">

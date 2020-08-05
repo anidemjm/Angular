@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="formulario col-4">
+      <!-- formulario componente -->
+      <app-formulario (nuevoProducto)="addNewProduct($event)"></app-formulario>
+    </div>
+    <div class="col-8">
+      <div class="listaCompra">
+        <!-- listaCompra componente -->
+        <app-lista-productos [productos]="arrProductos"></app-lista-productos>
+      </div>
+      <div class="totalCompra">
+        <!-- totalCompra componente -->
+        <app-precio-total-compra [precio]="precioTotal"></app-precio-total-compra>
+      </div>
+    </div>
+  </div>
+</div>

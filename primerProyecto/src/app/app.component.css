@@ -1,0 +1,21 @@
+.tienda {
+    width: 600px;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.tienda .carrito {
+    background-color: lightsteelblue;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.tienda .productos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tienda .productos app-producto {
+    width: 33.33%;
+}

@@ -1,0 +1,19 @@
+<!--
+
+    -- crear los dos componentes que os he pedido en el dibujo
+        - formulario
+        - listaAficiones
+
+    -- instalar bootstrap y que funcione
+
+    -- crear el formulario y boton del 1º componente.
+    -- crear evento y recoger el objeto hobbie sacarlo por consola.
+
+
+    -- crear la maquetacion de la lista
+      <li>NOmbre : aficion</li>
+      -- input entre app.component y listaAficiones
+      -- en app component tiene que haber un array
+      -- pintar a traves de un template literal la lista
+
+-->

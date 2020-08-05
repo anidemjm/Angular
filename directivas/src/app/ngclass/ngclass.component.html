@@ -1,0 +1,26 @@
+<p class="fondoAzul textoRojo">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis suscipit consectetur aperiam reprehenderit
+    dolores ullam voluptatibus aliquam, soluta odit eveniet optio ducimus corrupti! Non suscipit, inventore minima quas
+    dolor placeat.
+</p>
+
+<p [ngClass]="'fondoAzul textoRojo'">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis suscipit consectetur aperiam reprehenderit
+    dolores ullam voluptatibus aliquam, soluta odit eveniet optio ducimus corrupti! Non suscipit, inventore minima quas
+    dolor placeat.
+</p>
+
+<p [ngClass]="arrEstilos">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis suscipit consectetur aperiam reprehenderit
+    dolores ullam voluptatibus aliquam, soluta odit eveniet optio ducimus corrupti! Non suscipit, inventore minima quas
+    dolor placeat.
+</p>
+
+
+<p [ngClass]="{'fondoAzul' : activo, 'fondoRojo': !activo}">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis suscipit consectetur aperiam reprehenderit
+    dolores ullam voluptatibus aliquam, soluta odit eveniet optio ducimus corrupti! Non suscipit, inventore minima quas
+    dolor placeat.
+</p>
+
+<button (click)="cambiarEstado()">Activo</button>

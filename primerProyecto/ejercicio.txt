@@ -1,0 +1,11 @@
+Ejercicio para mañana
+
+Componente SUMA recibirá dos numeros cada vez que cargue dicho component.
+
+el resultado del componente tendra que ser un texto que diga 
+
+    "la suma entre num1 y num2 la obtendras cuando pulse click"
+
+    tiene que haber un boton que me pinte el resultado en rojo y en negrita.
+
+    
