@@ -6,10 +6,12 @@
           <div class="card-body">
             <h4 class="card-title">Aplicación Todo list</h4>
             <!-- task form -->
-            <app-taskform></app-taskform>
+            <app-taskform (tareaEnviada)="recogerTareaEnviada($event)"></app-taskform>
             <div class="list-wrapper">
               <!-- task list -->
-              <app-tasklist></app-tasklist>
+              <app-tasklist [tareas]="arrTareas" (tareaCompletada)="recogerTareaCompletada($event)"
+                (tareaBorrada)="recogerTareaBorrada($event)">
+              </app-tasklist>
             </div>
           </div>
         </div>

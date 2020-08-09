@@ -1,0 +1,11 @@
+<div class="form">
+    <div>
+        <label>Usuario</label><br>
+        <input type="text" [(ngModel)]="userLogin.user">
+    </div>
+    <div>
+        <label>Password</label><br>
+        <input type="password" [(ngModel)]="userLogin.password">
+    </div>
+    <button (click)="recogerUser()">Enviar</button>
+</div>

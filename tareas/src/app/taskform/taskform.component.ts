@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Tarea } from '../models/tarea';
 
 @Component({
   selector: 'app-taskform',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskformComponent implements OnInit {
 
-  constructor() { }
+  @Output() tareaEnviada: EventEmitter<Tarea>
+  newTarea: Tarea;
+  idTarea: number;
+
+  constructor() {
+    this.newTarea = new Tarea();
+    this.idTarea = 5;
+    this.tareaEnviada = new EventEmitter();
+  }
 
   ngOnInit(): void {
+  }
+
+  recogerTarea(): void {
+    this.newTarea.id = this.idTarea;
+    this.tareaEnviada.emit(this.newTarea);
+    this.newTarea = new Tarea();
+    this.idTarea++;
   }
 
 }

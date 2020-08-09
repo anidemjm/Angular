@@ -8,6 +8,8 @@ import { NgclassComponent } from './ngclass/ngclass.component';
 import { SemaforoComponent } from './semaforo/semaforo.component';
 import { NgifComponent } from './ngif/ngif.component';
 import { NgforComponent } from './ngfor/ngfor.component';
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { DepartamentoComponent } from './departamento/departamento.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NgforComponent } from './ngfor/ngfor.component';
     NgclassComponent,
     SemaforoComponent,
     NgifComponent,
-    NgforComponent
+    NgforComponent,
+    NgswitchComponent,
+    DepartamentoComponent
   ],
   imports: [
     BrowserModule,

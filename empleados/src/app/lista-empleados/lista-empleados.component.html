@@ -1,0 +1,29 @@
+<h3>Empleados</h3>
+<hr>
+<section class="container">
+    <div class="row" *ngIf="this.arrEmpleados.length !== 0; else elseBlock">
+
+        <div class="col-12 col-md-6 col-lg-3 mb-2" *ngFor="let empleado of arrEmpleados">
+            <div class="card">
+                <img [src]="empleado.imagen" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{empleado.nombre}}</h5>
+                    <a [routerLink]="['/empleado', empleado.id]" class="btn btn-primary">Más info</a>
+                </div>
+                <div class="text-center" [ngClass]="{ 'bg-danger': !empleado.activo, 'bg-success': empleado.activo}">
+                    {{empleado.activo}}
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <ng-template #elseBlock>
+        <h5>No hay empleados en este departamento</h5>
+    </ng-template>
+
+    <!-- <div *ngIf="this.arrEmpleados.length === 0">
+        <h5>No hay empleados en este departamento</h5>
+    </div> -->
+</section>

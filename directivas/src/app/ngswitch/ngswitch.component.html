@@ -1,0 +1,9 @@
+<div [ngSwitch]="estadoMensaje">
+    <p *ngSwitchCase="'ok'">Usuario registrado correctamente</p>
+    <p *ngSwitchCase="'ko'">Ha ocurrido un error y el usuario no se ha podido registrar</p>
+    <p *ngSwitchCase="'repetido'" a>Usuario ya existe no puedes registrar de nuevo el mismo usuario</p>
+    <p *ngSwitchCase="'vacio'">Debes rellenar todo los campos</p>
+    <p *ngSwitchDefault>Nada que destacar</p>
+</div>
+
+<!-- ngSwicth es una directava doble tiene atributo y tiene estructural -->

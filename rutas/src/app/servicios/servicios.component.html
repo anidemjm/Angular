@@ -1,0 +1,33 @@
+<section>
+    <h1>Servicios {{contador}}</h1>
+    <button [routerLink]="['/comentario']">Ir a comentario</button>
+    <article>
+        <h2>Servicio 1</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae saepe eos corporis. Commodi odit similique
+            voluptatibus dignissimos atque, vero, est magni cumque laborum sint error officiis laudantium excepturi modi
+            deleniti!</p>
+        <button [routerLink]="['/service', '1']">Leer más</button>
+    </article>
+
+    <article>
+        <h2>Servicio 2</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae saepe eos corporis. Commodi odit similique
+            voluptatibus dignissimos atque, vero, est magni cumque laborum sint error officiis laudantium excepturi modi
+            deleniti!</p>
+        <button [routerLink]="['/service', '2']">Leer más</button>
+    </article>
+
+    <article>
+        <h2>Servicio 3</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae saepe eos corporis. Commodi odit similique
+            voluptatibus dignissimos atque, vero, est magni cumque laborum sint error officiis laudantium excepturi modi
+            deleniti!</p>
+        <button [routerLink]="['/service', '3']">Leer más</button>
+    </article>
+
+    <div>
+        <input type="text" [(ngModel)]="dato">
+        <button (click)="recogerDato()">Enviar dato</button>
+    </div>
+
+</section>

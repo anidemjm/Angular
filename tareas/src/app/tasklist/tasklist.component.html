@@ -1,38 +1,14 @@
 <ul class="d-flex flex-column todo-list">
 
-    <li class="mensual">
+    <li [class]="tarea.priority" [ngClass]="{'completed': tarea.completed}" *ngFor="let tarea of tareas">
         <div class="form-check">
             <label class="form-check-label">
-                <input class="checkbox" type="checkbox">
-                Titulo de la tarea
+                <input class="checkbox" type="checkbox" (change)="completarTarea(tarea.id)">
+                {{tarea.title}}
                 <i class="input-helper"></i>
             </label>
         </div>
-        <i class="remove mdi mdi-close-circle-outline" li></i>
+        <i (click)="borrarTarea(tarea.id)" class="remove mdi mdi-close-circle-outline"></i>
     </li>
-
-    <!-- <li class="diario">
-        <div class="form-check">
-            <label class="form-check-label">
-                <input class="checkbox" type="checkbox">
-                Otra tarea
-                <i class="input-helper"></i>
-            </label>
-        </div>
-        <i class="remove mdi mdi-close-circle-outline" li></i>
-    </li>
-
-
-    <li class="urgente completed">
-        <div class="form-check">
-            <label class="form-check-label">
-                <input class="checkbox" type="checkbox" checked>
-                Esta tarea esta tachada
-                <i class="input-helper"></i>
-            </label>
-        </div>
-        <i class="remove mdi mdi-close-circle-outline" li></i>
-    </li> -->
-
 
 </ul>

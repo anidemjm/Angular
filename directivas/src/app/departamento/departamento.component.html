@@ -1,0 +1,53 @@
+<!-- <ul>
+    <li><button (click)="cargarSeccion(1)">Contabilidad</button></li>
+    <li><button (click)="cargarSeccion(2)">Marketing</button></li>
+    <li><button (click)="cargarSeccion(3)">Comercial</button></li>
+    <li><button (click)="cargarSeccion(4)">Direccion</button></li>
+</ul>
+
+<main [ngSwitch]="departamento">
+    <section *ngSwitchCase="1">
+        <h2>Contabilidad</h2>
+        <p>Responsable: Juan Antonio</p>
+        <p>Email: <a href="mailto:contabilidad@empresa.com">contabilidad@empresa.com</a></p>
+    </section>
+    <section *ngSwitchCase="2">
+        <h2>Marketing</h2>
+        <p>Responsable: Rodrigo</p>
+        <p>Email: <a href="mailto:marketing@empresa.com">marketing@empresa.com</a></p>
+    </section>
+    <section *ngSwitchCase="3">
+        <h2>Comercial</h2>
+        <p>Responsable: Lucia</p>
+        <p>Email: <a href="mailto:comercial@empresa.com">comercial@empresa.com</a></p>
+    </section>
+    <section *ngSwitchCase="4">
+        <h2>Direccion</h2>
+        <p>Responsable: Marta</p>
+        <p>Email: <a href="mailto:direccion@empresa.com">direccion@empresa.com</a></p>
+    </section>
+</main> -->
+
+<!-- 
+    una empresa tiene cuatro departamentos, dichos departamentos tiene como dato un titulo un reponsable y email contacto. Estos datos son estaticos.
+
+    tendrá que haber un sistema botones que me permita mostrar la informacion de departamento o de otro, clickcando el los mismo botones.
+
+-->
+
+<!-- relolución dinamica desde un array-->
+
+<ul>
+    <li *ngFor="let departamento of arrDepartamentos"><button
+            (click)="cargarSeccion(departamento.id)">{{departamento.title}}</button></li>
+</ul>
+
+<main [ngSwitch]="departamento">
+    <ng-container *ngFor="let departamento of arrDepartamentos">
+        <section *ngSwitchCase="departamento.id">
+            <h2>{{departamento.title}}</h2>
+            <p>Responsable: {{departamento.manager}}</p>
+            <p>Email: <a [href]="'mailto:' + departamento.email">{{departamento.email}}</a></p>
+        </section>
+    </ng-container>
+</main>

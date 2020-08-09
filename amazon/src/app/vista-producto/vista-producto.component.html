@@ -1,0 +1,12 @@
+<div>
+    <h2>{{producto.nombre}}</h2>
+    <p>{{producto.descripcion}}</p>
+    <small>{{producto.precio}} euros</small>
+    <p>Categoria: {{producto.categoria}}</p>
+</div>
+
+<button [routerLink]="['/producto', producto.id, 'relacionados']">Relacionados</button>
+<button [routerLink]="['/producto', producto.id, 'populares']">Populares</button>
+<div class="subrutas">
+    <router-outlet></router-outlet>
+</div>
