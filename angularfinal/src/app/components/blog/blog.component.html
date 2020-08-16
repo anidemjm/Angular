@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="d-flex my-3 align-items-center">
+    <h1 class="mr-auto">Posts</h1>
+    <input type="text" class="form-control w-25" placeholder="Buscar" aria-label="Buscar" [(ngModel)]="searchText"
+      (ngModelChange)="searchItems($event)" aria-describedby="addon-wrapping">
+  </div>
+
+  <hr>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let post of posts">
+      <div class="card">
+        <div class="image">
+          <img src="{{post.imagen}}" *ngIf="post.imagen" class="img-fluid" />
+        </div>
+        <h2 class="text-center font-weight-bold">{{post.titulo}}</h2>
+        <hr>
+        <p><strong>Texto: </strong>{{post.texto}}</p>
+        <p><strong>Autor: </strong>{{post.autor}}</p>
+        <p><strong>Fecha: </strong>{{post.fecha}}</p>
+        <p><strong>Categoria: </strong>{{post.categoria}}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<p>{{precio | currency:'CNY'}}</p>
+<p>{{ currentDate | date: 'fullDate'}}</p>
+<p>{{ currentDate | date: 'shortDate'}}</p>
+<p>{{ currentDate | date: 'EEEE dd/MM/yy HH:mm:ss'}}</p>
+<p>{{ numero | number: '1.2-4' }}</p>
+<p>{{ 'hola'| uppercase }}</p>
+<p>{{ 'adios'| lowercase }}</p>
+<p>{{ porcentaje | percent: '1.1-2'}}</p>
+
+INICIO: <input type="range" min="0" [max]="nombres.length" step="1" [value]="inicio" (input)="onInicio($event)">
+
+FIN: <input type="range" min="0" [max]="nombres.length" step="1" [value]="inicio" (input)="onFin($event)">
+
+<ul>
+  <li *ngFor="let nombre of nombres | slice:inicio:fin">{{nombres}}</li>
+
+</ul>

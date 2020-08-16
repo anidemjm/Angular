@@ -1,0 +1,57 @@
+<div class="container" *ngIf="post">
+  <h1 class="my-3">{{title}}</h1>
+  <hr>
+
+  <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
+    <div class="row">
+      <div class="form-group col">
+        <label for="titulo">Titulo</label>
+        <input class="form-control" type="text" name="titulo" #titulo="ngModel" [(ngModel)]="post.titulo" required>
+        <span class="form_error" *ngIf="titulo.touched && !titulo.valid">
+          El titulo es obligatorio
+        </span>
+      </div>
+      <div class="form-group col">
+        <label for="texto">Texto</label>
+        <input class="form-control" type="text" name="texto" #texto="ngModel" [(ngModel)]="post.texto" required>
+        <span class="form_error" *ngIf="texto.touched && !texto.valid">
+          El texto es obligatorio
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <label for="autor">Autor</label>
+        <input class="form-control" type="text" name="autor" #autor="ngModel" [(ngModel)]="post.autor" required>
+        <span class="form_error" *ngIf="autor.touched && !autor.valid">
+          El autor es obligatorio
+        </span>
+      </div>
+      <div class="form-group col">
+        <label for="imagen">Imagen</label>
+        <input class="form-control" type="text" name="imagen" #imagen="ngModel" [(ngModel)]="post.imagen" required>
+        <span class="form_error" *ngIf="imagen.touched && !imagen.valid">
+          La imagen es obligatorio
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <label for="fecha">Fecha</label>
+        <input class="form-control" type="text" name="fecha" #fecha="ngModel" [(ngModel)]="post.fecha" required>
+        <span class="form_error" *ngIf="fecha.touched && !fecha.valid">
+          La fecha es obligatoria
+        </span>
+      </div>
+      <div class="form-group col">
+        <label for="categoria">Categoria</label>
+        <input class="form-control" type="text" name="categoria" #categoria="ngModel" [(ngModel)]="post.categoria"
+          required>
+        <span class="form_error" *ngIf="categoria.touched && !categoria.valid">
+          La categoria es obligatoria
+        </span>
+      </div>
+    </div>
+    <button class="btn btn-info" type="submit" [disabled]="!postForm.form.valid">Enviar</button>
+  </form>
+</div>
